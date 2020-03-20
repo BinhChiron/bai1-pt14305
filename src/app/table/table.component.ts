@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{product} from '../product';
+import{data} from '../Modtata';
 
 @Component({
   selector: 'app-table',
@@ -10,6 +12,11 @@ export class TableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+   products = data;
+  Delete(id){
+      this.products = this.products.filter(x => x.id !== id);
+      console.log(product);
   }
 
 }
